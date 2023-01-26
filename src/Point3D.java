@@ -60,4 +60,13 @@ public class Point3D {
     public double getZ() {
         return z;
     }
+
+    @Override
+    public String toString() {
+        return "Point3D{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                '}';
+    }
 }
