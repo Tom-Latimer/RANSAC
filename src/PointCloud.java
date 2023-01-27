@@ -1,9 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class PointCloud {
-    private ArrayList<Point3D> points;
+    private List<Point3D> points;
     public PointCloud() {
         this.points = new ArrayList<>();
     }
@@ -20,7 +21,7 @@ public class PointCloud {
         return points.get((int)(Math.random() * ((points.size()-1) +1)));
     }
 
-    private ArrayList<Point3D> getPoints() {
+    private List<Point3D> getPoints() {
         return this.points;
     }
 
