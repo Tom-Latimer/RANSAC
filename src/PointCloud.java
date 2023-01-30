@@ -27,7 +27,7 @@ public class PointCloud {
 
     public void save (String filename) {
         //create output file
-        File outputFile = new File(filename);
+        File outputFile = new File(filename+".xyz");
         try {
             PrintWriter writer = new PrintWriter(outputFile);
 
@@ -63,7 +63,7 @@ public class PointCloud {
         ArrayList<Point3D> outputList = new ArrayList<Point3D>();
 
         try {
-            File file = new File(filename);
+            File file = new File(filename+".xyz");
             BufferedReader buffReader = new BufferedReader(new FileReader(file));
 
             // skip 'x,y,z' header
@@ -88,15 +88,6 @@ public class PointCloud {
 
     Iterator<Point3D> iterator() {
         return getPoints().iterator();
-    }
-
-    public static void main(String[] args) {
-        PointCloud pc = new PointCloud("PointCloud1.xyz");
-        pc.save("test.xyz");
-        Iterator itr = pc.iterator();
-        while (itr.hasNext()) {
-            System.out.println(itr.next());
-        }
     }
 
 }
